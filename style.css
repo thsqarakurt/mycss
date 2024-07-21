@@ -1,0 +1,197 @@
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-color: #0e0d0d;
+            color: white;
+            font-family: 'Kosugi Maru', sans-serif;
+            padding: 0;
+            position: relative;
+            background-image: url('https://i.hizliresim.com/6ub8nk3.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .c1 {
+            font-family: Staatliches;
+        }
+
+        .c4 {
+            font-family: Kosugi Maru;
+        }
+
+        .c5 {
+            font-family: Philosopher;
+        }
+
+        h1 {
+            margin-top: -20px;
+            font-size: 100px !important;
+            font-weight: 500;
+        }
+
+        span.underline {
+            text-decoration: underline;
+        }
+
+        span.h1 {
+            color: #FF073A;
+            font-size: 70px;
+            text-decoration: none !important;
+        }
+
+
+        .container {
+            display: block;
+            justify-content: center;
+            margin-top: -40px;
+        }
+
+        #toggleMessage {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            background-image: url('https://i.hizliresim.com/t9a7gtu.png');
+            text-align: left;
+            font-size: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            background-color: #222222;
+            padding: 0 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            margin-left: 50px;
+            background-position: right;
+            background-repeat: no-repeat;
+
+        }
+
+        #message.visible {
+            max-height: 1000px;
+            padding: 10px;
+        }
+
+        .hidden {
+            padding: 0;
+        }
+
+        #toggleMessage {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        button {
+            margin-top: 10px;
+            font-family: Kosugi Maru;
+            font-weight: 500;
+            background-color: #000;
+            border: 1px solid #FF073A;
+            color: #FF073A;
+            transition: 0.3s;
+            height: 50px;
+            border-radius: 7px;
+
+
+        }
+
+        button:hover {
+            background-color: #FF073A;
+            color: #000;
+        }
+
+        #toggleMessage::after {
+            content: 'Click to read';
+            position: absolute;
+            top: 1px;
+            left: 50%;
+            transform: translateX(130px);
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #FF073A;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #toggleMessage:hover::after {
+            opacity: 1;
+        }
+
+
+
+
+        .glow {
+            color: #fff;
+            text-align: center;
+            animation: glow 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0033FF, 0 0 40px #0033FF, 0 0 50px #0033FF, 0 0 60px #0033FF, 0 0 70px #0033FF;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #FF0033, 0 0 40px #FF0033, 0 0 50px #FF0033, 0 0 60px #FF0033, 0 0 70px #FF0033, 0 0 80px #FF0033;
+            }
+        }
+
+        .logo {
+
+            width: 400px;
+            height: auto;
+            transition: opacity 0.3s, filter 0.3s;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            margin-top: -60px;
+            margin-bottom: -50px;
+
+        }
+
+        .logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .alink {
+            text-decoration: none;
+            color: #FF073A;
+        }
+
+        .alink:hover {
+            text-decoration: underline;
+            transition: 0.5s;
+
+        }
